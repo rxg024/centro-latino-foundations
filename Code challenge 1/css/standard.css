@@ -1,0 +1,15 @@
+nav {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: cyan;
+    margin: 10px;
+}
+
+.content {
+    font-size: 14pt;
+    font-style: italic;
+}
