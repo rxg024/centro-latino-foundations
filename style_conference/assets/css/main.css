@@ -147,6 +147,59 @@ Venue
 </section>
 
 
+body{
+	color:  #273a6e;
+	font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    color: color: #6c89db;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 44px;
+}
+h2 {
+    font-size: 24px;
+    line-height: 44px;
+}
+h3 {
+    font-size: 21px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    color: #4568c9;
+	font-size: 14px;
+	font-weight: 400;
+}
+strong {
+    font-weight: 400;
+}
+
+cite,
+em {
+    font-style: italic;
+}
+a {
+    color: #6c89db;
+}
+a:hover {
+    color: #a9b2b9;
+}
+.tagline {
+    margin: 66px 0 22px 0;
+}
+<nav class"primary-nav">
+...
+</nav>
+
+
+
+
+
 
 
 
