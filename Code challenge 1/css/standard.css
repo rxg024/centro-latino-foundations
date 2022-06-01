@@ -13,3 +13,7 @@ a {
     font-size: 14pt;
     font-style: italic;
 }
+
+.teaser a:hover h3 {
+    color: #a9b2b9;
+}
