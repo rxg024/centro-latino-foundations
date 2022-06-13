@@ -1,27 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Style Conference - Register</title>
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/main.css>"
+    <title>Register - Styles Conference</title>
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <link rel="stylesheet" href="http:fonts.googleapis.com/css?family=Lato:100,300,400">
 </head>
+   
 <body>
+
+    <!--Header-->
+
     <header class="primary-header container group">
-        <h1>
-            <a href="index.html"><img src="assets/images/logo-1.png" alt=""></a>
-        </h1>
-        <h3>August 24 - 26th Omaha, NE</h3>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="speakers.html">Speakers</a>
-            <a href="schedule.html">Schedule</a>
-            <a href="venue.html">Venue</a>
-            <a href="register.html">Register</a>
-        </nav>
-    </header>
+
+        <h1 class="logo">
+    <a href="index.html"><img src="assets/images/logo-1.png" alt="logo" width:"150" height:"200"></a>
+</h1>
+
+<h3 class="tagline">August 24&ndash;26th &ndash; La Vista, NE</h3>
+
+<nav class="nav primary-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li><!--
+        --><li><a href="speakers.html">Speakers</a></li><!--
+        --><li><a href="speakers.html">Speakers</a></li><!--
+        --><li><a href="schedule.html">Schedule</a></li><!--
+        --><li><a href="venue.html">Venue</a></li><!--
+        --><li><a href="register.html">Register</a></li><!--
+        </ul>
+    </nav>
+    
+</header>
+
+<section class="row">
+    <div class="grid">
+
+    <!-- Details -->    
+
+<section class="col-2-3">
+
+<h2>Purchase a Conference Pass</h2>
+<h5>$99 per Pass</h5>
+
+<p>Purchase your Styles Conference pass using the form to the right. Multiple passes may be
+purchased within the same order, so feel free to bring a friend or two along. Once your order is
+finished we'll follow up and provide a receipt for your purchase. See you soon!</p>
+
+<h4>Benefits of Attending</h4>
+
+<ul class="why-attend">
+    <li>Over twenty world-class speakers sharing their knowledge and journey.</li>
+    <li>Three day of hands on workshops and professional presentations</li>
+    <li>Hosted at The Embassy Suites, a beautiful Conference Center where many can gether</li>
+    <li>Gain experience and vital information on the latest software, techniques, and best
+        practices.</li>
+</ul>
+
+    </div>
+</section>
+
+
+
+
+</section><!--
+--><form class="col-1-3"> action="#"method="post">
+
+    <fieldset class="register-group">
+
+        <label>
+            Name
+        <input type="text" name="name" placeholder="Full Name" required>
+        </label>
+
+
+        <label>
+            Email
+        <input type="email" name="email" placeholder="Email address" required>
+        <input class="btn-default" type="submit" name="submit" value="Purchase">
+        </label>
+
+        <label>
+            Number of Passes
+        <select name="quantity" required>
+            <option value="1" selected">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        </label>
+
+        <label>
+            Comments
+            <textarea name="comments"></textarea>
+        </label>
+
+    </fieldset>
+
+    <input type="submit" name="submit" value="Purchase">
+
+</form>
+
+</div>
+</section>
+
+
+
+--><li><a href="speakers.html">Speakers</a></li><!--
+--><li><a href="schedule.html">Schedule</a></li><!--
+--><li><a href="venue.html">Venue</a></li><!--
+--><li><a href="register.html">Register</a></li><!--
+
+
+
+
+
     
     <footer>
         <small>&copy; Developer Style Conference</small>
@@ -32,7 +126,6 @@
         <a href="venue.html">Venue</a>
         <a href="register.html">Register</a>
     </nav>
-
 
     <nav class="nav primary-nav">
         <ul>
@@ -78,3 +171,7 @@
         </div>
         </section>
         
+
+
+
+
