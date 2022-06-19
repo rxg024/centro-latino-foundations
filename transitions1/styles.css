@@ -1,0 +1,59 @@
+#block1 {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 0, 0.5);
+    opacity: 1;
+    transition: 3s ease;
+}
+#block2 {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(255, 0, 0, 0.5);
+    transform-origin:translate(-50% -50%);
+}
+#move {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    left: 50%;
+}
+#size {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    left: 55%;
+}
+#opacity {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    left: 60%;
+}
+#size {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    left: 65%;
+}
+#move:hover ~ #block1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50% -50%);
+}
+#size:hover ~ #block1 {
+    width: 20%;
+    height: 20%;
+}
+#opacity ~ #block1 {
+    opacity: .25;
+}
+#color:hover ~ #block1 {
+    background-color: green;
+}
