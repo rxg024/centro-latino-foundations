@@ -28,15 +28,15 @@
 
 .group:before,
 .group:after {
-content:"";
-display: table;
+    content:"";
+    display: table;
 }
 .group:after {
-clear: both;
+    clear: both;
 }
 .group {
-clear: both;
-*zoom: 1;
+    clear: both;
+    *zoom: 1;
 }
 
 /*  Clearfix   */
@@ -187,8 +187,8 @@ Venue
 
 
 body{
-color:  #273a6e;
-font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:  #273a6e;
+    font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4 {
@@ -211,8 +211,8 @@ h4 {
 }
 h5 {
     color: #4568c9;
-font-size: 14px;
-font-weight: 400;
+    font-size: 14px;
+    font-weight: 400;
 }
 strong {
     font-weight: 400;
@@ -378,6 +378,22 @@ table h4 {
 .schedule-offset {
     color: #a9b2a9;
 }
-
-
-
+.teaser img {
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 22px;
+    max-width: 100%;
+}
+.speaker-info img {
+    border-radius: 50%;
+    height: 130px;
+    margin: -66px 0 22px 0;
+    vertical-align: top;
+}
+.speaker-info {
+    border: 1px solid #dfe2e5;
+    border-radius: 5px;
+    margin-top: 88px;
+    padding-bottom: 22px;
+    text-align: center;
+}
