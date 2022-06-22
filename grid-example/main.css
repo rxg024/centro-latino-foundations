@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+}
+
+/* Here are the grid-items with their grid-area names used later in grid-template areas. */
+.item1 {
+    grid-area: header;
+}
+.item2 {
+    grid-area: menu;
+}
+.item3 {
+    grid-area: main;
+}
+.item4 {
+    grid-area: right;
+}
+.item5 {
+    grid-area: footer;
+}
+
+/* the grid container class, aptly named grid-container */
+
+.grid-container {
+    display: grid;                                                      /* makes this a grid */ 
+    grid-template-areas:                                                /* defines the general layout of the grid */
+        'header header header header header header'                     /* row 1 layout */
+        'menu main main main main right'                                /* row 2 layout */
+        'menu footer footer footer footer footer';                      /* row 3 layout */
+    grid-gap: 0.5em;                                                    /* gap between the grid items, NOT on the */
+                                                                        /* outside of the grid container */
+    
+    padding: 0.5em;                                                     /* for a uniform looking grid, this is the same value as 
+                                                                            the grid-gap, preview this and then change the 
+                                                                            padding to 0 and preview it again to see the difference */
+
+background-color: #2196F3;                                            /* This background color shows through the grid-gap */
+
+height: 100vh;
+}
+
+/* This selects all the grid items to style them */
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);     /* Preview then change to 0.8 to 0.1 to see what this does */
+    text-align: center;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    font-size: 4vh;
+}
