@@ -8,35 +8,37 @@ html, body {
     grid-area: header;
 }
 .item2 {
-    grid-area: menu;
+    grid-area: left;
 }
 .item3 {
-    grid-area: main;
+    grid-area: middle;
 }
 .item4 {
     grid-area: right;
 }
 .item5 {
-    grid-area: footer;
+    grid-area: footer-left;
 }
+.item6 {
+    grid-area: footer-right;
+}
+
 .grid-container {
     display: grid;                                                      
     grid-template-areas:
-        'header header header header header header'
-        'menu main main main main right'
-        'menu footer footer footer footer footer';
+        'header header header header'
+        'left middle middle right'
+        'footer-left footer-left footer-right footer-right';
     grid-gap: 0.25em;
     padding: 0.25em;                                       
-                                                                            
-                                                                            
-background-color: #00a000;
-
-height: 40vh;
+    background-color: #00a000;
+    height: none;
 }
 
 .grid-container > div {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
+    padding: 0.25em;  
     padding-top: 0.25em;
     padding-bottom: 0.25em;
     font-size: 3vh;
