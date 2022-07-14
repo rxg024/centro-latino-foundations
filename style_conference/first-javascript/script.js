@@ -185,3 +185,4 @@ if (goldCoins > 5) {
 } else if (goldCoins > 20) {
     console.log("I'm rich!!!");
 }
+
