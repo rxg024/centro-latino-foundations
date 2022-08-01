@@ -1,0 +1,22 @@
+<html>
+        <head>
+                <title>First JavaScript</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                <script>
+                        $(function() {
+                                $("#clicker").click(buttonClicked);
+
+                                function buttonClicked() {
+                                        $("body").append("<p>Button was clicked!</p>");
+                        }
+                        });
+                </script>
+        </head>
+        <body>
+                <button id="clicker" type="button">Click me!</button>
+    
+        </body>
+</html>
+
+
+
