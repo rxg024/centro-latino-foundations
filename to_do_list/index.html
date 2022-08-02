@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To-do list</title>
+        <style>
+            body {
+                margin: 0;
+                box-sizing: border-box;
+                background-color: antiquewhite;
+            }
+            #work {
+                width: 30vw;
+                float: left;
+                display: inline-block;
+                min-height: 20vh;
+                border: 1px solid black;
+                background-color: lightblue;
+            }
+            #home {
+                width: 30vw;
+                display: inline-block;
+                min-height: 20vh;
+                border: 1px solid black;
+                background-color: lightgreen;
+            }
+            div {
+                margin: 2vw 5vw;
+                text-align: center;
+            }
+            .task {
+                margin: 0;
+            }
+            #remove {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>To Do List</h1>
+            <input type="text" id="input" width="60ch;">
+            <select name="choice" id="choice">
+                <option value="work">Work</option>
+                <option value="home">Home</option>
+            </select>
+            <button id="add">Add</button>
+        </div>
+        <div id="taskList">
+            <div id="work">
+                <h1>Work</h1>
+            </div>
+            <div id="home">
+                <h1>Home</h1>
+            </div>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.slim.js" 
+            integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" 
+            crossorigin="anonymous">
+        </script>"
+        <script>
+            $("#add").click(function() {
+                checkIfTaskIsEmpty();
+            });
+
+                function checkIfTaskIsEmpty() {
+                let taskDisc = $("input").val();
+                if(taskDisc.trim() == "") {
+                    $(".mustAdd").remove();
+                    $(".container").append("<div class='mustAdd'><span>You must include a task to add</span></div>");
+                } else {
+                    $(".mustAdd").remove();
+                    addTaskDescription(taskDisc);
+                }
+            }
+
+            $("body").on("click", "#remove", function() {
+                $(this).parent().remove();
+            });
+
+            function addTaskDescription(task) {
+                let choice = $("select").val();
+                $("#"+choice).append("<div class='task'>" + task + "<span id='remove'> X </span> </div>");
+                $("input").val("");
+            }
+
+            $("input").keypress(function() {
+                if (event.which == 13) {
+                    checkIfTaskIsEmpty();
+                }
+            });
+        </script>
+    </body>
+</html>
