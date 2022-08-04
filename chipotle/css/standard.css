@@ -1,0 +1,87 @@
+html, body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 4vh;
+    color: white;
+    background-color: none;
+}
+
+header {
+    background-image: url(../images/hw-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    color: white;
+}
+
+nav {
+    margin-right: 12vw;
+}
+
+nav > a {
+    margin-left: 6vh;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav > a::hover {
+    color: white;
+}
+
+nav > a > span {
+    position: ;
+    top: -0.50em;
+    left: 0.50;
+}
+
+header > span {
+    height: 1em;
+    line-height: 100%;
+    vertical-align: middle;
+    margin-left: 10vw;
+    margin-top: .25em;
+    white-space: pre;
+}
+
+article {
+    background-image: url(../images/hw-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+article > h1 {
+    padding-top: 20vh;
+    font-size: 5rem;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+article > div {
+    margin-top: 6vh;
+    margin-bottom: 12vh;
+    font-size: 2rem;
+}
+
+article > a > i {
+    margin-left: 2em;
+}
+
+
+
+
+
