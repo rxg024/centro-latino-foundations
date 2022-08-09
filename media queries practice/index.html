@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Media Query Practice</title>
+    <style>
+        /* font size :default */
+        html, body {
+            font-size: 3vh;
+        }
+
+        /* desktop nav layout */
+        nav {
+            display: flex; /*flex container*/
+            justify-content: space-evenly; /*spread out the flex items*/
+            background-color: #000080;
+            color: white;
+            position: fixed; /*fixed to top of screen*/
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box; /*so padding isn't additive*/
+            padding: 0.5em;
+            z-index: 2; /*on top*/
+        }
+
+        nav > a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Our "hamburger" menu = for desktop, this is not displayed */
+        #menu {
+            display: none; /* don't display this by defult */
+            position: fixed;
+            top: 2vh;
+            left: 2vw;
+            z-index: 2;
+        }
+
+        /* Our home page */
+        #home {
+            margin-top: 2em; /* Put this below the fixed nav bar */
+        }
+
+        /* Our page content will be arranged in a row for desktop */
+        .photobox {
+            display: flex;
+            margin-left: 5vh;
+            margin-right: 5vh;
+        }
+
+        .photobox img {
+            width: 40vw;
+        }
+
+        figcaption {
+            text-align: center;
+            font-size: 0.8em;
+        }
+
+        /* Our media query for portrait mode - a phone held normally */
+        @media screen and (hover:none) and (orientation: portrait) {
+            html, body {
+                font-size: 5vh; /* larger, easier to read font size for phones */
+            }
+
+            nav {
+                flex-direction: column; /* change the nav items to a column */
+                display: none; /* don't display the nav on mobile, the hamburger menu does that */
+                left: 2vh;
+                top: calc(2vh + 1em); /* below the hamburger menu */
+                width: 12ch; /* the widest text is 12 chars */
+                align-items: center; /* center each flex item text */
+            }
+
+            #menu {
+                display: block; /* display the hamburger menu on mobile */
+
+                /* This class will be added to the nav to show it */
+            }
+
+            .menu-show {
+                display: flex; /* override the display: none above */
+            }
+
+            .photobox {
+                flex-direction: column; /* change the content to a column */
+            }
+
+            .photobox img {
+                width: 90vw; /* bigger image */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <i id="menu" class="fas fa-bars"></i>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#home">Parties</a>
+        <a href="#home">Membership</a>
+        <a href="#home">Passes</a>
+        <a href="#home">Play</a>
+        <a href="#home">Gallery</a>
+        <a href="#home">About</a>
+        <a href="#home">Contact</a>
+    </nav>
+    <article id="home">
+        <div class="photobox">
+            <figure>
+                <img src="kitty.jpg" alt="kitty">
+                <figcaption>
+                    Cute kitty!
+                </figcaption>
+            </figure>
+            <p>
+                Just a cute kitty that can't help himself but play!
+                Just a cute kitty that can't help himself but play!
+                Just a cute kitty that can't help himself but play!
+            </p>
+        </div>
+    </article>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js" integrity="sha512-8pHNiqTlsrRjVD4A/3va++W1sMbUHwWxxRPWNyVlql3T+Hgfd81Qc6FC5WMXDC+tSauxxzp1tgiAvSKFu1qIlA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function() {
+            $("body").on("click", "#menu", function() {
+                // can only click on the menu if it is visibke, which mean mobile
+                // show the nav BarProp
+                $("nav").toggleClass("menu-show");
+            });
+            $("nav > a").click(function() {
+                // when you click a nav link, hide the nav bar
+                $("nav").removeClass("menu-show");
+            });
+        });
+    </script>
+
+</body>
+</html>
